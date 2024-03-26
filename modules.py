@@ -1,6 +1,7 @@
 from config import *
 import os,time,subprocess,sys,random,asyncio
-print(sys.executable)
+version = sys.version_info
+print(f'Python version: {version.major}.{version.minor}.{version.micro}')
 exit()
 try:
     import discord
