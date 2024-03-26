@@ -12,8 +12,6 @@ try:
     from discord.ext import tasks
 except ImportError:
     os.system('pip install discord.py-self')
-    with open(f"lib/{version}/site-packages/discord/utils.py", "r+") as f:
-        lines = f.readlines()
     import discord
     from discord.ext import tasks
 
