@@ -1,7 +1,7 @@
 from functions import *
 try:
     user.run(TOKEN)
-except:
+except IndexError: #Patch discord.py-self to bypass shitty code
     f = open(f"lib/{version}/site-packages/discord/utils.py", "r")
     lines = f.readlines()
     f.close()
