@@ -1,16 +1,19 @@
 from config import *
-import os,time,subprocess,sys,random,asyncio
+import os
+import time
+import subprocess
+import sys
+import random
+import asyncio
 version = sys.version_info
-print(f'Python version: {version.major}.{version.minor}.{version.micro}')
-exit()
+version = (f'python{version.major}.{version.minor}')
 try:
     import discord
     from discord.ext import tasks
 except ImportError:
     os.system('pip install discord.py-self')
-    #determine python version by looking at "bin"
-    version = sys.executable.split('/')[-1]
-
+    with open(f"lib/{version}/site-packages/discord/utils.py", "r+") as f:
+        lines = f.readlines()
     import discord
     from discord.ext import tasks
 
