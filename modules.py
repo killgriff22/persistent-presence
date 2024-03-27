@@ -14,9 +14,11 @@ new1478 = """        return (build_file[build_index : build_index + 6])\n"""
 try:
     import discord
     from discord.ext import tasks
+    from discord.ext import commands
 except ImportError:
     os.system('pip install discord.py-self')
     import discord
     from discord.ext import tasks
+    from discord.ext import commands
 
-user = discord.Client()
+user = commands.Bot(command_prefix='!')

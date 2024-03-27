@@ -28,5 +28,5 @@ except IndexError: #Patch discord.py-self to bypass shitty code
         print("Failed to patch, uninstalling")
         os.system(f"pip uninstall discord.py-self -y")
 except asyncio.exceptions.CancelledError:
-    print("Exiting gracefully...")
+    print("\nExiting gracefully...")
     exit()
